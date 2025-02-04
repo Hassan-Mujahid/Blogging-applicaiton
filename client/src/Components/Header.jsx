@@ -39,11 +39,13 @@ const Header = () => {
         </Button>
         <Link to="/sign-in">
           <Button
-            gradientDuoTone="purpleToBlue"
             outline
-            className="&:hover: text-black"
+            gradientDuoTone="purpleToBlue"
+            className="relative overflow-hidden   
+             before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-500 before:to-blue-500 
+             before:opacity-0 hover:before:opacity-100 active:before:opacity-100 active:text-white hover:text-white before:transition-opacity before:duration-500 z-0 cursor-pointer"
           >
-            SignIn
+            <span className="z-10">Sign in</span>
           </Button>
         </Link>
         <Navbar.Toggle />
