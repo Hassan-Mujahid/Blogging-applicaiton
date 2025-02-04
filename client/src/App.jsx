@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Dashboard from "./pages/Dashboard";
 import SignIn from "./pages/SignIn";
-import SignOut from "./pages/SignOut";
+import SignUp from "./pages/SignUp";
 import Projects from "./pages/Projects";
 import RootLayout from "./Components/RootLayout";
 const App = () => {
@@ -17,7 +17,7 @@ const App = () => {
         { path: "/about", element: <About /> },
         { path: "/dashboard", element: <Dashboard /> },
         { path: "/sign-in", element: <SignIn /> },
-        { path: "/sign-out", element: <SignOut /> },
+        { path: "/sign-up", element: <SignUp /> },
         { path: "/projects", element: <Projects /> },
       ],
     },
