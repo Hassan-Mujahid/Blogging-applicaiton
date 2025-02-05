@@ -1,3 +1,4 @@
+import { theme } from "flowbite-react";
 import flowbite from "flowbite-react/tailwind";
 
 /** @type {import('tailwindcss').Config} */
