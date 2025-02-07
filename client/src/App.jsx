@@ -7,6 +7,8 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import Projects from "./pages/Projects";
 import RootLayout from "./Components/RootLayout";
+import PrivateRoute from "./Components/PrivateRoute";
+
 const App = () => {
   const router = createBrowserRouter([
     {
@@ -15,7 +17,10 @@ const App = () => {
       children: [
         { index: true, element: <Home /> },
         { path: "/about", element: <About /> },
-        { path: "/dashboard", element: <Dashboard /> },
+        {
+          element: <PrivateRoute />,
+          children: [{ path: "/dashboard", element: <Dashboard /> }],
+        },
         { path: "/sign-in", element: <SignIn /> },
         { path: "/sign-up", element: <SignUp /> },
         { path: "/projects", element: <Projects /> },
