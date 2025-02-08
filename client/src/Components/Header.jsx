@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Navbar, Button, TextInput, Dropdown, Avatar } from "flowbite-react";
 import { Link, useLocation } from "react-router-dom";
 import { AiOutlineSearch } from "react-icons/ai";
@@ -11,6 +11,7 @@ const Header = () => {
   const dispatch = useDispatch();
   const { currentUser } = useSelector((state) => state.user);
   const { theme } = useSelector((state) => state.theme);
+
   return (
     <Navbar className="border-b-2 border-gray-200 dark:border-gray-700">
       <Link
@@ -82,7 +83,7 @@ const Header = () => {
         )}
         <Navbar.Toggle />
       </div>
-      <Navbar.Collapse>
+      <Navbar.Collapse className="transition-all duration-300 ease-in-out">
         <Navbar.Link as={Link} to={"/"} active={path.pathname === "/"}>
           Home
         </Navbar.Link>

@@ -67,12 +67,6 @@ export const signin = async (req, res, next) => {
 export const googleAuth = async (req, res, next) => {
   try {
     const { name, email, googlePhotoUrl } = await req.body;
-    const googleData = {
-      name,
-      email,
-      googlePhotoUrl,
-    };
-    console.log("googleData:", googleData);
 
     const user = await User.findOne({ email });
 

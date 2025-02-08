@@ -5,11 +5,13 @@ import Footer from "./Footer";
 
 const RootLayout = () => {
   return (
-    <>
-      <Header />
-      <Outlet />
-      <Footer />
-    </>
+    <div className="w-full flex justify-center">
+      <div className="w-full max-w-[1920px]">
+        <Header />
+        <Outlet />
+        <Footer />
+      </div>
+    </div>
   );
 };
 
