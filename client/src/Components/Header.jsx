@@ -52,7 +52,7 @@ const Header = () => {
                 className="cursor-pointer"
                 alt="user"
                 rounded
-                img={currentUser.photoUrl}
+                img={currentUser.profilePhoto}
               />
             }
           >
